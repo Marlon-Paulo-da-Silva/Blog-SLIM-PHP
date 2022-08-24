@@ -1,5 +1,7 @@
 <?php
 
+  // namespace app\helpers\helpers;
+
   function view (string $view, array $data = []){
 
     $path = dirname(__FILE__) . '/views';

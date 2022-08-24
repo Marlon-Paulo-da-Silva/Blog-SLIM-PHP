@@ -1,5 +1,4 @@
-# Login com SLIM Framework e JS Puro 
-
+# Blog com SLIM Framework utilizando a linguagem PHP
 <div align="center">
   <!-- <img align="center" src="https://github.com/Marlon-Paulo-da-Silva/Login-SLIM-PHP-JS/blob/main/recursos/image_2022_08_23T17_58_27_366Z.png" alt="demo" height="200">
   <br />
@@ -13,4 +12,6 @@
 
 <h4>Blog</h4>
 
-- [ ] Criando a estrutura do projeto
+- [x] Criando a estrutura do projeto
+- [x] Criando tela de login
+- [x] Realizando login
