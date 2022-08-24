@@ -2561,7 +2561,7 @@ form.addEventListener('submit', async event => {
       data
     } = await axios__WEBPACK_IMPORTED_MODULE_0___default().post('/login', formData);
     console.log(data);
-    data == 'loggedIn' ? window.location.href = '/admin' : setMessage('Erro ao fazer o login');
+    data == 'loggedIn' ? window.location.href = '/admin/painel' : setMessage('Erro ao fazer o login');
   } catch (error) {
     setMessage('Erro ao fazer o login');
   }

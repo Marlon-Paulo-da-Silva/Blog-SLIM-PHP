@@ -22,7 +22,7 @@ form.addEventListener('submit', async (event) => {
         console.log(data);
 
         (data == 'loggedIn') ?
-            window.location.href = '/admin' :
+            window.location.href = '/admin/painel' :
             setMessage('Erro ao fazer o login');
         
 

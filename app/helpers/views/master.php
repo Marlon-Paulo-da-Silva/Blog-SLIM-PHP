@@ -8,7 +8,9 @@
     <title><?= $this->e($title); ?></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- AnimateCSS -->
-    <link rel="stylesheet" href="./assets/styles/global.css"> <!-- Referência do CSS Global -->
+    <link rel="stylesheet" href="http://<?= $_SERVER['HTTP_HOST'] ?>/assets/styles/global.css"> <!-- Referência do CSS Global -->
+
+    <!--<link rel="stylesheet" href="./assets/styles/global.css">  Referência do CSS Global -->
     <script src="https://unpkg.com/feather-icons"></script> <!-- Biblioteca do Feather Icons -->
 </head>
 

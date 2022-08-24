@@ -10,7 +10,7 @@ class DashboardController
 {
     public function index(Request $request, Response $response, $args)
     {
-        view('Admin/admin', ['title' => 'Admin Painel']);
+        view('Admin/dashboard', ['title' => 'Admin Painel']);
         // $response->getBody()->write("Hello, Marlon");
         return $response;
     }

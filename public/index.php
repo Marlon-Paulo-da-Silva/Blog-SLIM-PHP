@@ -6,6 +6,7 @@
 
 
   use Slim\Factory\AppFactory;
+  use Slim\Routing\RouteCollectorProxy;
 
 
   $app = AppFactory::create();
@@ -15,14 +16,16 @@
   
 
   // painel admin
-  $app->get('/admin', 'app\controllers\admin\DashboardController:index');
+  // $app->get('/admin/painel', 'app\controllers\admin\DashboardController:index');
   
   
-  // $app->group('admin', function() use($app){
+  // $app->group('/admin', function() use($app){
+  //   $app->get('/painel', 'app\controllers\admin\DashboardController:index');
+  // });
 
-
-
-  // })->add($loggedIn);
+  $app->group('/admin', function (RouteCollectorProxy $group) {
+    $group->get('/painel', 'app\controllers\admin\DashboardController:index');
+  });
 
   // Run app
   $app->run();
