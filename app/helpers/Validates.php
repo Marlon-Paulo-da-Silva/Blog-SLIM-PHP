@@ -1,0 +1,31 @@
+<?php
+
+namespace app\helpers;
+
+use app\Strategy\BlogStrategy;
+
+class Validates {
+  use BlogStrategy;
+  
+  public function hasErrors() {
+    // return substr_count($validate, ':') >= 1;
+  }
+  public function back(){
+    // return substr_count($validate, ':') >= 1;
+  }
+  public function validate($rules) {
+    foreach ($rules as $field => $validation) {
+      if ($this->hasOneValidation($validation)) {
+        $this->$validation($field);
+      } 
+    }
+  }
+
+  private function hasOneValidation($validate) {
+    return substr_count($validate, ':') == 0;
+  }
+  
+  private function hasOneMoreValidation($validate){
+    return substr_count($validate, ':') >= 1;
+  }
+}

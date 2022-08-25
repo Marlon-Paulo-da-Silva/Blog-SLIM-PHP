@@ -5,7 +5,7 @@ namespace app\controllers\admin;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use app\Repository\LoginRepository;
-
+use app\helpers\Validates;
 
 class UserController
 {
@@ -21,17 +21,22 @@ class UserController
         $email = strip_tags($_POST['email']);
         $passwrd = strip_tags($_POST['passwrd']);
 
-        // $connection = Connection::getConnection();
-
-        // $prepare = $connection->prepare("select id, name, email, passwrd from login where email = :email limit 1");
-        // $prepare->execute([
-        //     'email' => $email
-        // ]);
-        // $loginRepository = new LoginRepository();
-        // $user = $loginRepository->teste();
 
         $user = new LoginRepository;
         $user = $user->verifyUser($email);
+
+        $validate = new Validates;
+
+        $validate->validate([
+          'name' => 'required',
+          'email' => 'required:email',
+          'phone' => 'required:phone',
+        ]);
+
+        if($validate->hasErrors()){
+          return $validate->back();
+        }
+
         // echo json_encode(array("teste" => "teste"));
         // echo json_encode($teste);
 
