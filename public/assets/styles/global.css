@@ -70,7 +70,7 @@ html, body {
 /* Estilizações utilizadas para botões */
 
 .btn {
-    width: 30%;
+    width: 36%;
     padding: 15px;
     border: 0;
     border-radius: 5px;
@@ -89,6 +89,7 @@ html, body {
 
 .btn-login {
     background-image: linear-gradient(to right, #719E40 0.36%, rgb(19 58 20) 119.95%);
+    margin-top: 15px;
 }
 
 .btn-save {

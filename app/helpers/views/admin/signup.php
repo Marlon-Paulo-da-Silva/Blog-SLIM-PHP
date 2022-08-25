@@ -11,17 +11,17 @@
     
     <article class="logo-text">
         <h3>Seja bem vindo á</h3>
-        <h1>Tela de Login</h1>
+        <h1>Tela de Cadastro</h1>
     </article>
 </section>
 
 <section class="container-right">
     
-    <h1>Faça seu login</h1>
+    <h1>Cadastre-se conosco</h1>
     
     <div id="message">
     </div>
-    <form class="form-login" id="form-login">
+    <form class="form-signup" id="form-signup" style="margin: 0 auto;">
         <div>
             <label>Usuário:</label>
             <input type="text" name="email" placeholder="Ex.: usuarioteste" class="input input-dark" value="marlon@gmail.com">
@@ -32,7 +32,11 @@
             class="input input-dark" value="abc123">
             <i data-feather="eye-off" class="iconFeather"></i>
         </div>
+        <div>
+            <label>Telefone:</label>
+            <input type="text" name="phone" placeholder="Ex.: 18997039595" class="input input-dark" value="18997039595">
+        </div>
         <button type="submit" class="btn btn-login">Entrar</button>
     </form>
 </section>
-<script src="/assets/scripts/login.js"></script>
+<script src="/assets/scripts/signup.js"></script>

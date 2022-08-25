@@ -15,3 +15,5 @@
 - [x] Criando a estrutura do projeto
 - [x] Criando tela de login
 - [x] Realizando login
+- [ ] Criando tela de cadastro
+- [ ] Realizando cadastro

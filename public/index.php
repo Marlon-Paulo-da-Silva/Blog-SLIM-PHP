@@ -14,7 +14,9 @@
   $app->get('/login', 'app\controllers\admin\LoginController:index');
   $app->post('/login', 'app\controllers\admin\LoginController:store');
   
-
+  $app->get('/signup', 'app\controllers\admin\UserController:create');
+  $app->post('/signup', 'app\controllers\admin\UserController:store');
+  
   // painel admin
   // $app->get('/admin/painel', 'app\controllers\admin\DashboardController:index');
   

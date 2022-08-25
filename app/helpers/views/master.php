@@ -18,8 +18,7 @@
     <main class="container">
         <?= $this->section('content'); ?>
     </main>
-
-    <script src="./login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
 </body>
 
 </html>

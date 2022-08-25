@@ -7,11 +7,11 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 use app\Repository\LoginRepository;
 
 
-class LoginController
+class UserController
 {
-    public function index(Request $request, Response $response, $args)
+    public function create(Request $request, Response $response, $args)
     {
-        view('Admin/login', ['title' => 'Admin Login']);
+        view('Admin/signup', ['title' => 'Admin Sign up']);
         // $response->getBody()->write("Hello, Marlon");
         return $response;
     }
@@ -32,33 +32,33 @@ class LoginController
 
         $user = new LoginRepository;
         $user = $user->verifyUser($email);
-
-        // echo json_encode($user['passwrd']);
+        // echo json_encode(array("teste" => "teste"));
+        // echo json_encode($teste);
 
         // die();
 
-        if (!$user) {
-            http_response_code(401);
-            die();
-        }
+        // if (!$user) {
+        //     http_response_code(401);
+        //     die();
+        // }
 
-        // if(!password_verify($passwrd, $user->passwrd)){
+        // // if(!password_verify($passwrd, $user->passwrd)){
 
-        if ($passwrd != $user['passwrd']) {
-            // echo json_encode(['passwrd do banco: ' => $user->passwrd]);
-            // echo json_encode(['passwrd do formulario: ' => $passwrd]);
-            http_response_code(401);
-            die();
-        }
+        // if ($passwrd != $user->passwrd) {
+        //     // echo json_encode(['passwrd do banco: ' => $user->passwrd]);
+        //     // echo json_encode(['passwrd do formulario: ' => $passwrd]);
+        //     http_response_code(401);
+        //     die();
+        // }
 
-        unset($user->passwrd);
+        // unset($user->passwrd);
 
-        $_SESSION['user'] = $user;
+        // $_SESSION['user'] = $user;
 
-        http_response_code(200);
+        // http_response_code(200);
 
-        echo json_encode('loggedIn');
+        // echo json_encode('loggedIn');
 
-        return $response;
+        // return $response;
     }
 }

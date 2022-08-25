@@ -105,8 +105,50 @@
 .form-login button:hover {
     transform: translateY(-5px);
 }
+.form-signup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-/* Estilização responsiva da página de Login */
+    margin: 20px 0;
+}
+
+.form-signup div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+    padding: 10px;
+    position: relative;
+
+    animation: backInLeft;
+    animation-duration: 1s;
+}
+
+.form-signup div > label {
+    color: white;
+    margin: 5px 0;
+}
+
+.form-signup div .iconFeather {
+    position: absolute;
+    top: 58px;
+    right: 30px;
+    color: white;
+}
+
+.form-signup button {
+    margin: 30px 0;    
+    transition: 0.5s ease-out;
+}
+
+.form-signup button:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilização responsiva da página de signup */
 
 @media (max-width: 1000px) {
     .container {
@@ -142,7 +184,7 @@
 }
 
 @media (max-width: 600px) {
-    .form-login div {
+    .form-signup div {
         width: 80%;
     }
 }
