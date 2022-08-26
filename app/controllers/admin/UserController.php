@@ -18,12 +18,12 @@ class UserController
 
     public function store(Request $request, Response $response, $args)
     {
-        $email = strip_tags($_POST['email']);
-        $passwrd = strip_tags($_POST['passwrd']);
+        // $email = strip_tags($_POST['email']);
+        // $passwrd = strip_tags($_POST['passwrd']);
 
 
-        $user = new LoginRepository;
-        $user = $user->verifyUser($email);
+        // $user = new LoginRepository;
+        // $user = $user->verifyUser($email);
 
         $validate = new Validates;
 
@@ -36,6 +36,8 @@ class UserController
         if($validate->hasErrors()){
           return $validate->back();
         }
+
+
 
         // echo json_encode(array("teste" => "teste"));
         // echo json_encode($teste);

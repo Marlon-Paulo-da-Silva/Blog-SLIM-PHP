@@ -17,7 +17,16 @@ class Validates {
     foreach ($rules as $field => $validation) {
       if ($this->hasOneValidation($validation)) {
         $this->$validation($field);
-      } 
+        
+      }
+      
+      if($this->hasOneMoreValidation($validation)){
+        $validations = explode(':', $validation);
+
+        foreach ($validations as $validation){
+          $this->$validation($field);
+        }
+      }
     }
   }
 
