@@ -20,21 +20,25 @@
     <h1>Cadastre-se conosco</h1>
     
     <div id="message">
+        
     </div>
     <form class="form-signup" id="form-signup" style="margin: 0 auto;">
         <div>
             <label>Usuário:</label>
-            <input type="text" name="email" placeholder="Ex.: usuarioteste" class="input input-dark" value="marlon@gmail.com">
+            <input type="text" name="email" placeholder="Ex.: usuarioteste" class="input input-dark" value="">
+            <?= getFlash('email'); ?>
         </div>
         <div id="passwordContainer">
             <label>Senha:</label>
             <input id="password" name="passwrd" type="password" placeholder="Ex.: senhateste"
-            class="input input-dark" value="abc123">
+            class="input input-dark" value="">
+            <?= getFlash('password'); ?>
             <i data-feather="eye-off" class="iconFeather"></i>
         </div>
         <div>
             <label>Telefone:</label>
-            <input type="text" name="phone" placeholder="Ex.: 18997039595" class="input input-dark" value="18997039595">
+            <input type="text" name="phone" placeholder="Ex.: 18997039595" class="input input-dark" value="">
+            <?= getFlash('phone'); ?>
         </div>
         <button type="submit" class="btn btn-login">Entrar</button>
     </form>

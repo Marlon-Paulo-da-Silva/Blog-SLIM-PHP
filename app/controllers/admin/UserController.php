@@ -18,6 +18,7 @@ class UserController
 
     public function store(Request $request, Response $response, $args)
     {
+        
         // $email = strip_tags($_POST['email']);
         // $passwrd = strip_tags($_POST['passwrd']);
 
@@ -34,38 +35,13 @@ class UserController
         ]);
 
         if($validate->hasErrors()){
-          return $validate->back();
+          back();
         }
 
+        // $_SESSION['message'] = 'Cliente cadastrado com sucesso';
 
+        // echo $_SESSION['message'];
 
-        // echo json_encode(array("teste" => "teste"));
-        // echo json_encode($teste);
-
-        // die();
-
-        // if (!$user) {
-        //     http_response_code(401);
-        //     die();
-        // }
-
-        // // if(!password_verify($passwrd, $user->passwrd)){
-
-        // if ($passwrd != $user->passwrd) {
-        //     // echo json_encode(['passwrd do banco: ' => $user->passwrd]);
-        //     // echo json_encode(['passwrd do formulario: ' => $passwrd]);
-        //     http_response_code(401);
-        //     die();
-        // }
-
-        // unset($user->passwrd);
-
-        // $_SESSION['user'] = $user;
-
-        // http_response_code(200);
-
-        // echo json_encode('loggedIn');
-
-        // return $response;
+        return $response;
     }
 }

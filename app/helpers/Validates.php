@@ -7,12 +7,6 @@ use app\Strategy\BlogStrategy;
 class Validates {
   use BlogStrategy;
   
-  public function hasErrors() {
-    // return substr_count($validate, ':') >= 1;
-  }
-  public function back(){
-    // return substr_count($validate, ':') >= 1;
-  }
   public function validate($rules) {
     foreach ($rules as $field => $validation) {
       if ($this->hasOneValidation($validation)) {
@@ -20,7 +14,7 @@ class Validates {
         
       }
       
-      if($this->hasOneMoreValidation($validation)){
+      if($this->hasTwoOrMoreValidation($validation)){
         $validations = explode(':', $validation);
 
         foreach ($validations as $validation){
@@ -34,7 +28,7 @@ class Validates {
     return substr_count($validate, ':') == 0;
   }
   
-  private function hasOneMoreValidation($validate){
+  private function hasTwoOrMoreValidation($validate){
     return substr_count($validate, ':') >= 1;
   }
 }

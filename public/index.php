@@ -11,6 +11,8 @@
 
   $app = AppFactory::create();
 
+  $app->get('/', 'app\controllers\admin\LoginController:index');
+  
   $app->get('/login', 'app\controllers\admin\LoginController:index');
   $app->post('/login', 'app\controllers\admin\LoginController:store');
   

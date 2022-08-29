@@ -372,6 +372,18 @@
     margin-top: 17px;
 }
 
+.error {
+    border: solid 1px red;
+    padding: 5px;
+    color: red;
+}
+
+.success {
+    border: solid 1px red;
+    padding: 5px;
+    color: green;
+}
+
 
 @media (max-width: 1000px) {
     .container-aside {
